@@ -1,2 +1,356 @@
-@import 'vars';
+* {
+    padding: 0;
+    margin: 0;
+}
 
+body {
+    font-family: 'Montserrat';
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+header {
+    background-image: url(./imagin/Rectangle111002150.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.header {
+    width: 770px;
+    padding-top: 196px;
+    padding-bottom: 156px;
+
+    &__title {
+        color: #202027;
+        font-size: 64px;
+        font-weight: 700;
+        padding-bottom: 24px;
+    }
+
+    &__description {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: #202027;
+        padding-bottom: 48px;
+
+        &-bold {
+            font-weight: 600;
+        }
+
+    }
+
+    &__button {
+        background-color: #202027;
+        color: #FFFFFF;
+        width: 247px;
+        height: 66px;
+        border: 1px solid #202027;
+        border-radius: 60px;
+        font-family: 'Montserrat';
+        font-size: 24px;
+        font-weight: 600px;
+    }
+
+}
+
+.decor1 {
+    position: absolute;
+    top: 94px;
+    left: 63px;
+}
+
+.decor2 {
+    position: absolute;
+    top: 69px;
+    left: 156px;
+}
+
+.decor3 {
+    position: absolute;
+    top: 538px;
+    left: 948px;
+}
+
+.decor4 {
+    position: absolute;
+    top: 568px;
+    left: 1013px;
+}
+
+.decor5 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.decor6 {
+    position: absolute;
+    top: 96px;
+    right: 0;
+    z-index: 0;
+}
+
+.decor7 {
+    position: absolute;
+    top: 770px;
+    left: 25px;
+}
+
+.decor8 {
+    position: absolute;
+    top: 822px;
+    left: 40px;
+}
+
+.decor9 {
+    position: absolute;
+    top: 47px;
+    right: 123px;
+}
+
+.decor10 {
+    position: absolute;
+    z-index: 0;
+    top: 126px;
+    right: 45px;
+}
+
+.decor11 {
+    position: absolute;
+    z-index: 0;
+    bottom: 45px;
+    right: 150px;
+}
+
+.decor12 {
+    position: absolute;
+    z-index: 0;
+    bottom: 65px;
+    right: 52px;
+}
+
+.On-games {
+    position: relative;
+    background-color: #202027;
+
+    &__title {
+        color: #FFFFFF;
+        font-size: 64px;
+        font-weight: 700;
+        padding-top: 94px;
+        padding-bottom: 24px;
+    }
+
+    &__description {
+        color: #FFFFFF;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        padding-bottom: 72px;
+    }
+
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    padding-bottom: 50px;
+    align-items: flex-start;
+    column-gap: 32px;
+}
+
+.link-card {
+    text-decoration: none;
+    z-index: 1;
+
+}
+
+.game-card {
+    z-index: 1;
+    background-color: #FFFFFF;
+    width: 378px;
+    box-shadow: 0px 12.61px 42.25px -7.57px #00000021;
+    border-radius: 30px;
+
+    &__img {
+        padding-bottom: 40px;
+    }
+
+    &__number {
+        color: #202027;
+        background-color: #F7F7F7;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 16px;
+        margin-left: 32px;
+        width: 110px;
+        padding: 8px 16px 10px 16px;
+        border-radius: 52.58px;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 32px;
+        color: #202027;
+        font-weight: 700;
+        padding-left: 32px;
+        padding-bottom: 36px;
+    }
+
+
+}
+
+.netakusya {
+    margin-top: auto;
+}
+
+.mini-games {
+    position: relative;
+
+    background-color: #202027;
+    padding-bottom: 144px;
+
+    &__title {
+        font-size: 64px;
+        font-weight: 700;
+        color: #FFFFFF;
+        padding-bottom: 72px;
+    }
+
+    &__alternatives {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+    }
+
+}
+
+.left {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right {
+    display: flex;
+}
+
+.mini-game {
+    z-index: 1;
+    background-color: #FFFFFF;
+    box-shadow: 0px 20px 67px -12px #00000021;
+    border-radius: 30px;
+
+
+
+    &__img {
+
+        width: 600px;
+        height: 500px;
+    }
+
+    &__left {
+        padding-left: 48px;
+
+        &-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #202027;
+            padding-top: 48px;
+            padding-bottom: 24px;
+
+        }
+
+        &-description {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            padding-bottom: 36px;
+        }
+
+        &-btn {
+            background-color: #202027;
+            width: 247px;
+            height: 66px;
+            border-radius: 60px;
+            color: #FFFFFF;
+            font-size: 24px;
+            font-weight: 600;
+            // margin-bottom: 203px;
+        }
+    }
+
+    &__right {
+        padding-left: 48px;
+
+        &-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #202027;
+            padding-top: 48px;
+            padding-bottom: 24px;
+        }
+
+        &-description {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            padding-bottom: 36px;
+        }
+
+        &-btn {
+            background-color: #202027;
+            width: 247px;
+            height: 66px;
+            border-radius: 60px;
+            color: #FFFFFF;
+            font-size: 24px;
+            font-weight: 600;
+            // margin-bottom: 203px;
+        }
+
+
+    }
+}
+
+footer {
+    background-color: #BDED35;
+    text-align: center;
+}
+
+.footer-title {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+// анимации и ховеры
+
+.header__button:hover {
+    background-color: #FFFFFF;
+    color: #202027;
+    transition: 0.3s;
+}
+
+.link-card:hover {
+    transition: 0.3s;
+    transform: scale(1.05, 1.05);
+}
+
+.mini-game__left-btn:hover {
+     background-color: #FFFFFF;
+    color: #202027;
+    transition: 0.3s;
+}
+.mini-game__right-btn:hover{
+      background-color: #FFFFFF;
+    color: #202027;
+    transition: 0.3s;
+}
