@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat';
 }
@@ -53,7 +57,7 @@ header {
         border-radius: 60px;
         font-family: 'Montserrat';
         font-size: 24px;
-        font-weight: 600px;
+        font-weight: 600;
     }
 
 }
@@ -345,12 +349,13 @@ footer {
 }
 
 .mini-game__left-btn:hover {
-     background-color: #FFFFFF;
+    background-color: #FFFFFF;
     color: #202027;
     transition: 0.3s;
 }
-.mini-game__right-btn:hover{
-      background-color: #FFFFFF;
+
+.mini-game__right-btn:hover {
+    background-color: #FFFFFF;
     color: #202027;
     transition: 0.3s;
 }
