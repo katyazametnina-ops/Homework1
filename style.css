@@ -44,6 +44,9 @@ header {
 .header__description-bold {
   font-weight: 600;
 }
+.header__description-mob {
+  display: none;
+}
 .header__button {
   background-color: #202027;
   color: #FFFFFF;
@@ -57,30 +60,35 @@ header {
 }
 
 .decor1 {
+  z-index: 0;
   position: absolute;
   top: 94px;
   left: 63px;
 }
 
 .decor2 {
+  z-index: 0;
   position: absolute;
   top: 69px;
   left: 156px;
 }
 
 .decor3 {
+  z-index: 0;
   position: absolute;
   top: 538px;
   left: 948px;
 }
 
 .decor4 {
+  z-index: 0;
   position: absolute;
   top: 568px;
   left: 1013px;
 }
 
 .decor5 {
+  z-index: 0;
   position: absolute;
   top: 0;
   right: 0;
@@ -94,18 +102,21 @@ header {
 }
 
 .decor7 {
+  z-index: 0;
   position: absolute;
   top: 770px;
   left: 25px;
 }
 
 .decor8 {
+  z-index: 0;
   position: absolute;
   top: 822px;
   left: 40px;
 }
 
 .decor9 {
+  z-index: 0;
   position: absolute;
   top: 47px;
   right: 123px;
@@ -130,6 +141,10 @@ header {
   z-index: 0;
   bottom: 65px;
   right: 52px;
+}
+
+.decor-mob1 {
+  display: none;
 }
 
 .On-games {
@@ -320,4 +335,71 @@ footer {
   background-color: #FFFFFF;
   color: #202027;
   transition: 0.3s;
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header {
+    padding-top: 147px;
+    max-width: 343px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 131px;
+  }
+  .header__title {
+    font-size: 40px;
+    text-align: center;
+  }
+  .header__description {
+    display: none;
+  }
+  .header__description-mob {
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 36px;
+  }
+  .header__button {
+    font-size: 16px;
+    width: 285px;
+    height: 55px;
+  }
+  .decor1 {
+    width: 35px;
+    height: 35px;
+    top: 97px;
+    left: 37px;
+  }
+  .decor2 {
+    width: 21px;
+    height: 21px;
+    top: 64px;
+    left: 91px;
+  }
+  .decor3 {
+    width: 18px;
+    height: 18px;
+    bottom: 74px;
+    left: 272px;
+  }
+  .decor4 {
+    width: 39px;
+    height: 41px;
+    bottom: 28px;
+    left: 303px;
+  }
+  .decor5 {
+    display: none;
+  }
+  .decor-mob1 {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

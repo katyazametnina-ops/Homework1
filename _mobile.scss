@@ -1,0 +1,86 @@
+@media(max-width: 767px) {
+    
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header {
+        padding-top: 147px;
+        max-width: 343px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 131px;
+
+        &__title {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        &__description {
+            display: none;
+        }
+
+        &__description-mob {
+            display: block;
+            font-size: 16px;
+            text-align: center;
+            padding-bottom: 36px;
+        }
+
+        &__button {
+            font-size: 16px;
+            width: 285px;
+            height: 55px;
+
+        }
+    }
+
+
+
+
+
+    .decor1 {
+        width: 35px;
+        height: 35px;
+        top: 97px;
+        left: 37px;
+    }
+
+    .decor2 {
+        width: 21px;
+        height: 21px;
+        top: 64px;
+        left: 91px;
+    }
+
+    .decor3 {
+        width: 18px;
+        height: 18px;
+        bottom: 74px;
+        left: 272px;
+    }
+
+    .decor4 {
+        width: 39px;
+        height: 41px;
+        bottom: 28px;
+        left: 303px;
+    }
+
+    .decor5 {
+        display: none;
+    }
+
+    .decor-mob1 {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+
+
+}
