@@ -103,12 +103,15 @@
     .mini-game {
 
         &__left {
+            
             padding-left: 29px;
+            padding-right: 29px;
 
             &-title {
                 font-size: 32px;
                 padding-top: 29px;
                 padding-bottom: 16px;
+                width: 284px;
             }
 
             &-description {
@@ -118,7 +121,7 @@
             }
 
             &-btn {
-                width: 285px;
+                width: 100%;
                 height: 55px;
                 font-size: 16px;
                 margin-bottom: 32px;
@@ -133,6 +136,8 @@
 
 
     }
+
+
 
     .left {
         display: flex;
