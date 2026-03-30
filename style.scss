@@ -48,6 +48,10 @@ header {
 
     }
 
+    &__description-mob {
+        display: none;
+    }
+
     &__button {
         background-color: #202027;
         color: #FFFFFF;
@@ -63,30 +67,35 @@ header {
 }
 
 .decor1 {
+    z-index: 0;
     position: absolute;
     top: 94px;
     left: 63px;
 }
 
 .decor2 {
+    z-index: 0;
     position: absolute;
     top: 69px;
     left: 156px;
 }
 
 .decor3 {
+    z-index: 0;
     position: absolute;
     top: 538px;
     left: 948px;
 }
 
 .decor4 {
+    z-index: 0;
     position: absolute;
     top: 568px;
     left: 1013px;
 }
 
 .decor5 {
+    z-index: 0;
     position: absolute;
     top: 0;
     right: 0;
@@ -100,18 +109,21 @@ header {
 }
 
 .decor7 {
+    z-index: 0;
     position: absolute;
     top: 770px;
     left: 25px;
 }
 
 .decor8 {
+    z-index: 0;
     position: absolute;
     top: 822px;
     left: 40px;
 }
 
 .decor9 {
+    z-index: 0;
     position: absolute;
     top: 47px;
     right: 123px;
@@ -136,6 +148,10 @@ header {
     z-index: 0;
     bottom: 65px;
     right: 52px;
+}
+
+.decor-mob1 {
+    display: none;
 }
 
 .On-games {
@@ -286,7 +302,7 @@ header {
             color: #FFFFFF;
             font-size: 24px;
             font-weight: 600;
-            // margin-bottom: 203px;
+            border: 1px solid #202027
         }
     }
 
@@ -359,3 +375,5 @@ footer {
     color: #202027;
     transition: 0.3s;
 }
+
+@import 'mobile';
