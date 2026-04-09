@@ -17,6 +17,7 @@ body {
 }
 
 header {
+    
     background-image: url(./imagin/Rectangle111002150.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -375,6 +376,5 @@ footer {
     color: #202027;
     transition: 0.3s;
 }
-
-@import 'mobile';
 @import 'tablet';
+@import 'mobile';
