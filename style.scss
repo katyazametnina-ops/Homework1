@@ -17,6 +17,7 @@ body {
 }
 
 header {
+    
     background-image: url(./imagin/Rectangle111002150.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -302,7 +303,7 @@ header {
             color: #FFFFFF;
             font-size: 24px;
             font-weight: 600;
-            border: 1px solid #202027
+            border: 1px solid #202027;
         }
     }
 
@@ -332,7 +333,7 @@ header {
             color: #FFFFFF;
             font-size: 24px;
             font-weight: 600;
-            // margin-bottom: 203px;
+            border: 1px solid #202027;
         }
 
 
@@ -375,6 +376,5 @@ footer {
     color: #202027;
     transition: 0.3s;
 }
-
-@import 'mobile';
 @import 'tablet';
+@import 'mobile';

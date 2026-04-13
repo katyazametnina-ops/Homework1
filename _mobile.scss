@@ -1,211 +1,189 @@
-@media(max-width: 767px) {
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
+  .header {
+    box-sizing: border-box;
+    padding-top: 147px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 182px;
 
-
-
-    .center {
-        padding-left: 16px;
-        padding-right: 16px;
+    &__title {
+      font-size: 40px;
+      text-align: center;
     }
 
-    .header {
-        padding-top: 147px;
-        width: fit-content;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 131px;
-
-        &__title {
-            font-size: 40px;
-            text-align: center;
-        }
-
-        &__description {
-            display: none;
-        }
-
-        &__description-mob {
-            display: block;
-            font-size: 16px;
-            text-align: center;
-            padding-bottom: 36px;
-        }
-
-        &__button {
-            font-size: 16px;
-            width: 285px;
-            height: 55px;
-
-        }
+    &__description {
+      display: none;
     }
 
-
-
-
-
-    .decor1 {
-        width: 35px;
-        height: 35px;
-        top: 97px;
-        left: 37px;
+    &__description-mob {
+      display: block;
+      font-size: 16px;
+      text-align: center;
+      padding-bottom: 36px;
     }
 
-    .decor2 {
-        width: 21px;
-        height: 21px;
-        top: 64px;
-        left: 91px;
+    &__button {
+      font-size: 16px;
+      width: 285px;
+      height: 55px;
+    }
+  }
+
+  .decor1 {
+    width: 35px;
+    height: 35px;
+    top: 97px;
+    left: 37px;
+  }
+
+  .decor2 {
+    width: 21px;
+    height: 21px;
+    top: 64px;
+    left: 91px;
+  }
+
+  .decor3 {
+    width: 18px;
+    height: 18px;
+    top: 557px;
+    left: 72vw;
+  }
+
+  .decor4 {
+    width: 39px;
+    height: 41px;
+    top: 580px;
+    left: 80.8vw;
+  }
+
+  .decor5 {
+    display: none;
+  }
+
+  .decor6 {
+    display: none;
+  }
+
+  .decor7 {
+    display: none;
+  }
+
+  .decor8 {
+    display: none;
+  }
+
+  .decor9 {
+    display: none;
+  }
+
+  .decor10 {
+    display: none;
+  }
+
+  .decor11 {
+    display: none;
+  }
+
+  .decor12 {
+    display: none;
+  }
+
+  .decor-mob1 {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .On-games {
+    display: none;
+  }
+
+  .mini-games {
+    padding-bottom: 9px;
+
+    &__title {
+      font-size: 40px;
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+  }
+
+  .mini-game {
+    &__left {
+      padding-left: 29px;
+      padding-right: 29px;
+
+      &-title {
+        font-size: 32px;
+        padding-top: 29px;
+        padding-bottom: 16px;
+        width: 284px;
+      }
+
+      &-description {
+        font-size: 16px;
+        line-height: 100%;
+        padding-bottom: 32px;
+      }
+
+      &-btn {
+        width: 100%;
+        height: 55px;
+        font-size: 16px;
+        margin-bottom: 32px;
+      }
     }
 
-    .decor3 {
-        width: 18px;
-        height: 18px;
-        bottom: 74px;
-        left: 272px;
+    &__right {
+      padding-left: 29px;
+      padding-right: 29px;
+
+      &-title {
+        font-size: 32px;
+        padding-top: 29px;
+        padding-bottom: 16px;
+        width: 284px;
+      }
+
+      &-description {
+        font-size: 16px;
+        line-height: 100%;
+        padding-bottom: 32px;
+      }
+
+      &-btn {
+        width: 100%;
+        height: 55px;
+        font-size: 16px;
+        margin-bottom: 32px;
+      }
     }
 
-    .decor4 {
-        width: 39px;
-        height: 41px;
-        bottom: 28px;
-        left: 303px;
+    &__img {
+      width: auto;
+      height: auto;
     }
+  }
 
-    .decor5 {
-        display: none;
-    }
+  .left {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
-    .decor6 {
-        display: none;
-    }
-
-    .decor7 {
-        display: none;
-    }
-
-    .decor8 {
-        display: none;
-    }
-
-    .decor9 {
-        display: none;
-    }
-
-    .decor10 {
-        display: none;
-    }
-
-    .decor11 {
-        display: none;
-    }
-
-    .decor12 {
-        display: none;
-    }
-
-    .decor-mob1 {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-
-    .On-games {
-        display: none;
-    }
-
-    .mini-games {
-        padding-bottom: 9px;
-
-        &__title {
-            font-size: 40px;
-            padding-top: 48px;
-            padding-bottom: 48px;
-        }
-
-
-
-    }
-
-    .mini-game {
-
-        &__left {
-
-            padding-left: 29px;
-            padding-right: 29px;
-
-            &-title {
-                font-size: 32px;
-                padding-top: 29px;
-                padding-bottom: 16px;
-                width: 284px;
-            }
-
-            &-description {
-                font-size: 16px;
-                line-height: 100%;
-                padding-bottom: 32px;
-            }
-
-            &-btn {
-                width: 100%;
-                height: 55px;
-                font-size: 16px;
-                margin-bottom: 32px;
-            }
-
-        }
-
-        &__right {
-            padding-left: 29px;
-            padding-right: 29px;
-
-            &-title {
-                font-size: 32px;
-                padding-top: 29px;
-                padding-bottom: 16px;
-                width: 284px;
-            }
-
-            &-description {
-                font-size: 16px;
-                line-height: 100%;
-                padding-bottom: 32px;
-            }
-
-            &-btn {
-                width: 100%;
-                height: 55px;
-                font-size: 16px;
-                margin-bottom: 32px;
-            }
-
-        }
-
-        &__img {
-            width: auto;
-            height: auto;
-        }
-
-
-    }
-
-
-
-    .left {
-        display: flex;
-        flex-direction: column-reverse;
-
-    }
-
-    .right {
-        display: flex;
-        flex-direction: column;
-    }
-.footer-title {
+  .right {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-title {
     font-size: 16px;
-}
-
+  }
 }
