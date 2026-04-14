@@ -6,22 +6,30 @@ function guessNumber() {
     "Добро пожаловать в игру!!! Мы загадали число, и ваша задача его угадать.",
   );
   while (true) {
-    let userGuess = Number(prompt("Введите число от 1 до 100"));
+    let userGuess = prompt("Введите число от 1 до 100");
+
     if (userGuess == null) {
       alert(
-        "Вы не вписали число. Ни чего страшного! Давайте попробуем еще раз!",
+        "Вы не хотите играть? Ни чего страшного! Поиграем в следующий раз!",
       );
       return;
     }
-    if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
+
+    let userGuessNumber = Number(userGuess);
+
+    if (
+      isNaN(userGuessNumber) ||
+      userGuessNumber < 1 ||
+      userGuessNumber > 100
+    ) {
       alert("Некорректный ввод. Попробуйте снова.");
       continue;
     }
-    if (userGuess > randomNumber) {
+    if (userGuessNumber > randomNumber) {
       alert("Ваше число больше загаданного числа. Попробуйте еще раз!");
-    } else if (userGuess < randomNumber) {
+    } else if (userGuessNumber < randomNumber) {
       alert("Ваше число меньше загаданного числа. Попробуйте еще раз!");
-    } else if (userGuess == randomNumber) {
+    } else if (userGuessNumber == randomNumber) {
       alert("Потрясающе!!! ВЫ ВЫИГРАЛИ!!!");
       break;
     }
