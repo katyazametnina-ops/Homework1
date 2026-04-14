@@ -1,3 +1,14 @@
-for (let number = 7; number <= 22; number++) {
-    console.log(number);
+function numberSquaredConsole(a) {
+    return a ** a;
 }
+console.log(numberSquaredConsole(3));
+
+
+
+
+
+function numberSquared(b) {
+    return b ** b;
+}
+
+numberSquared(6);
