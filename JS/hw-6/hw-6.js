@@ -1,4 +1,14 @@
-let firstFriday = 2;
-for (let friday = firstFriday; friday <= 31; friday += 7) {
-  console.log(`Сегодня пятница, ${friday}-е число. Необходимо подготовить отчет.`);
+function numberCubed() {
+  let userNumber = prompt('Напишите число');
+  userNumber = Number(userNumber);
+
+  if (isNaN(userNumber)) {
+    return('Переданный параметр не является числом');
+  } else {
+    let cubed = userNumber ** 3;
+    return `${userNumber} в кубе равняется <${cubed}>`;
+  }
+
 }
+
+console.log(numberCubed());

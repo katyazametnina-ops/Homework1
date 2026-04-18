@@ -1,8 +1,11 @@
-const obj = {
-    "Коля": '200',
-    "Вася": '300',
-    "Петя": '400'
+function age() {
+    let userAge = Number(prompt('Сколько вам лет?'));
+    if(userAge < 0){
+        alert('Вы ввели неправильное значение');
+    } else if(userAge >= 0 && userAge <= 12){
+        alert('Привет, друг!');
+    } else if(userAge >= 13) {
+        alert('Добро пожаловать!');
+    }
 }
-for(let key in obj) {
-    console.log(`Имя сотрудника ${key} - зарплата ${obj[key]} доларов`);
-}
+age();

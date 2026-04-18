@@ -1,9 +1,10 @@
-for (let n = 1000; n > 50; n /= 2) {
-  if (n >= 50) {
-    console.log(n);
-  } else if(n < 50){
-    break;
+function check(a, b) {
+  if(isNaN(Number(a)) || isNaN(Number(b))) {
+    return('Одно или оба значения не являются числом');
+  } else {
+    return a * b;
   }
 }
-alert('Конечное число - 62.5')
-let num = 4;
+
+check(3, 4);
+check(3, 'rrr');
