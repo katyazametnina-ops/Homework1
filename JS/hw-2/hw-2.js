@@ -1,9 +1,6 @@
-function evenOddNumber(number) {
-    if(number % 2 == 0){
-        return ('Число четное')
-    } else {
-        return ('Число нечетное')
-    }
-}
-evenOddNumber (3);
-evenOddNumber (4);
+// Дан массив: [1, 5, 4, 10, 0, 3].
+
+// Найдите индекс значения 4 в этом массиве.
+const numbs = [1, 5, 4, 10, 0, 3];
+let position = numbs.indexOf(4);
+console.log(position);
