@@ -1,10 +1,8 @@
-function check(a, b) {
-  if(isNaN(Number(a)) || isNaN(Number(b))) {
-    return('Одно или оба значения не являются числом');
-  } else {
-    return a * b;
-  }
-}
+// Задание 5
+// Дан массив: 
+// [1, 1, 1]
+// . Добавьте в конец массива значения 2, 2, 2.
 
-check(3, 4);
-check(3, 'rrr');
+let numb = [1, 1, 1];
+numb.push(2, 2, 2);
+console.log(numb);

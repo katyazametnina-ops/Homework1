@@ -1,14 +1,8 @@
-function numberSquaredConsole(a) {
-    return a ** a;
-}
-console.log(numberSquaredConsole(3));
+// Задание 3
+// Дан массив чисел: [1, 3, 5, 10, 20].
 
+// С помощью метода join выведите элементы массива через пробел (пустую строку ' ').
 
-
-
-
-function numberSquared(b) {
-    return b ** b;
-}
-
-numberSquared(6);
+let numbers = [1, 3, 5, 10, 20];
+number = numbers.join('');
+console.log(numbers);

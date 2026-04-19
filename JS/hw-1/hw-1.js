@@ -1,9 +1,15 @@
-function whatSmaller(a, b) {
-  if (a < b) {
-    return a;
-  } else {
-    return b;
+// Дан массив:
+// [1, 5, 4, 10, 0, 3].
+
+// Создайте цикл, который будет выводить элементы массива до тех пор, пока не встретит значение 10.
+// После вывода значения 10 в консоль цикл должен прекратить свою работу.
+
+const numbers = [1, 5, 4, 10, 0, 3];
+
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
+  if (numbers[i] === 10) {
+    break;
   }
 }
-whatSmaller(8, 4);
-whatSmaller(6, 6);
+console.log(numbers[i]);
