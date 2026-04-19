@@ -1,24 +1,16 @@
-function calculationAreaCircle() {
-  return this.radius ** 2 * Math.PI;
-}
+// Задание 7
+// Дан массив: 
+// [9, 8, 7, 6, 5].
 
-function calculationAreaPerimeter() {
-  return 2 * Math.PI * this.radius;
-}
+// Попросите пользователя угадать число с помощью метода 
+// prompt. Если значение, которое ввел пользователь, есть в массиве, выведите в alert
+//  «Угадал», в противном случае — «Не угадал».
 
-const circle1 = {
- radius: 12,
- getArea: calculationAreaCircle,
- getPerimeter: calculationAreaPerimeter
-}
+let arr = [9, 8, 7, 6, 5];
+let userAnswer = +prompt('Угадай задуманное число');
 
-const circle2 = {
- radius: 5,
- getArea: calculationAreaCircle,
- getPerimeter: calculationAreaPerimeter
+if (arr.includes(userAnswer)) {
+alert('Угадал!')
+} else {
+  alert('Не угадал');
 }
-
-console.log(circle1.getArea());
-console.log(circle1.getPerimeter());
-console.log(circle2.getArea());
-console.log(circle2.getPerimeter());
