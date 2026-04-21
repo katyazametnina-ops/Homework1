@@ -4,5 +4,5 @@
 // С помощью метода join выведите элементы массива через пробел (пустую строку ' ').
 
 let numbers = [1, 3, 5, 10, 20];
-number = numbers.join('');
+number = numbers.join(' ');
 console.log(numbers);
