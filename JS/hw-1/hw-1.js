@@ -12,4 +12,3 @@ for (let i = 0; i < numbers.length; i++) {
     break;
   }
 }
-console.log(numbers[i]);
