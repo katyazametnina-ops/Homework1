@@ -90,5 +90,3 @@ function startMathGame() {
 
   alert(`🏁 Игра окончена! Ваш результат: ${score} из ${totalQuestions}.`);
 }
-
-startMathGame();
