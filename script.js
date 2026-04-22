@@ -35,3 +35,58 @@ function guessNumber() {
     }
   }
 }
+
+// Игра "Простая арифметика"
+function getRandom(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function startMathGame() {
+  let score = 0;
+  const totalQuestions = 5;
+  const operations = ['+', '-', '*', '/'];
+
+  alert("Добро пожаловать в игру! Решите 5 примеров.");
+
+  for (let i = 0; i < totalQuestions; i++) {
+    let num1, num2, operation, correctAnswer;
+
+    operation = operations[getRandom(0, operations.length - 1)];
+
+    if (operation === '+') {
+      num1 = getRandom(1, 30);
+      num2 = getRandom(1, 30);
+      correctAnswer = num1 + num2;
+    } else if (operation === '-') {
+      num1 = getRandom(5, 30);
+      num2 = getRandom(1, num1 - 1);
+      correctAnswer = num1 - num2;
+    } else if (operation === '*') {
+      num1 = getRandom(1, 10);
+      num2 = getRandom(1, 10);
+      correctAnswer = num1 * num2;
+    } else if (operation === '/') {
+      correctAnswer = getRandom(2, 9);
+      num2 = getRandom(2, 10);
+      num1 = correctAnswer * num2;
+    }
+
+    const questionText = `Вопрос ${i + 1} из ${totalQuestions}: ${num1} ${operation} ${num2}`;
+    
+    const userInput = +prompt(questionText + " = ?");
+
+    if (userInput === null || isNaN(userInput)) {
+      alert("Вы вышли из игры или ввели некорректное значение.");
+      return;
+    }
+
+    if (userInput === correctAnswer) {
+      alert("✅ Верно! Хороший результат.");
+      score++;
+    } else {
+      alert(`❌ Ошибка. Правильный ответ: ${correctAnswer}`);
+    }
+  }
+
+  alert(`🏁 Игра окончена! Ваш результат: ${score} из ${totalQuestions}.`);
+}

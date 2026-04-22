@@ -1,14 +1,14 @@
-function numberCubed() {
-  let userNumber = prompt('Напишите число');
-  userNumber = Number(userNumber);
+// Задание 6
+// Дан массив: 
+// [9, 8, 7, 'a', 6, 5].
 
-  if (isNaN(userNumber)) {
-    return('Переданный параметр не является числом');
-  } else {
-    let cubed = userNumber ** 3;
-    return `${userNumber} в кубе равняется <${cubed}>`;
-  }
+// С помощью метода 
+// sort
+//  отсортируйте массив и удалите букву 
+// 'a'
+//  из массива. Затем выведите массив.
 
-}
-
-console.log(numberCubed());
+let arr = [9, 8, 7, 'a', 6, 5];
+arr = arr.sort();
+console.log(arr.pop());
+console.log(arr);
