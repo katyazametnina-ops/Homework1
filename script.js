@@ -44,7 +44,7 @@ function getRandom(min, max) {
 function startMathGame() {
   let score = 0;
   const totalQuestions = 5;
-  const operations = ['+', '-', '*', '/'];
+  const operations = ["+", "-", "*", "/"];
 
   alert("Добро пожаловать в игру! Решите 5 примеров.");
 
@@ -53,26 +53,26 @@ function startMathGame() {
 
     operation = operations[getRandom(0, operations.length - 1)];
 
-    if (operation === '+') {
+    if (operation === "+") {
       num1 = getRandom(1, 30);
       num2 = getRandom(1, 30);
       correctAnswer = num1 + num2;
-    } else if (operation === '-') {
+    } else if (operation === "-") {
       num1 = getRandom(5, 30);
       num2 = getRandom(1, num1 - 1);
       correctAnswer = num1 - num2;
-    } else if (operation === '*') {
+    } else if (operation === "*") {
       num1 = getRandom(1, 10);
       num2 = getRandom(1, 10);
       correctAnswer = num1 * num2;
-    } else if (operation === '/') {
+    } else if (operation === "/") {
       correctAnswer = getRandom(2, 9);
       num2 = getRandom(2, 10);
       num1 = correctAnswer * num2;
     }
 
     const questionText = `Вопрос ${i + 1} из ${totalQuestions}: ${num1} ${operation} ${num2}`;
-    
+
     const userInput = +prompt(questionText + " = ?");
 
     if (userInput === null || isNaN(userInput)) {
@@ -90,3 +90,18 @@ function startMathGame() {
 
   alert(`🏁 Игра окончена! Ваш результат: ${score} из ${totalQuestions}.`);
 }
+
+// Игра "Переверни текст"
+
+function reverseText() {
+  let userText = prompt("Попробуй ввести текст, который будет перевернут");
+  if (userText === null || userText.trim() === "") {
+    alert("Игра окончена.");
+    return;
+  }
+  let stringToArray = userText.split("");
+  let reverseArray = stringToArray.reverse();
+  let arrayToString = reverseArray.join("");
+  alert(`В перевернутом виде, это слова будет: ${arrayToString}`);
+}
+
