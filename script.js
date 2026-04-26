@@ -105,3 +105,59 @@ function reverseText() {
   alert(`В перевернутом виде, это слова будет: ${arrayToString}`);
 }
 
+// Игра "Простая викторина"
+
+function simpleQuiz() {
+  alert(
+    "В этой игре, вам будет задан вопрос, и проедложено несколько вариантов ответа. Что бы ответить на вопрос, просто напишите номер ответа!",
+  );
+
+  const quizQuestionsWithAnswers = [
+    {
+      question: "Как называется школа магии, в которой учился Гарри Поттер?",
+      options: ["1. Хогвартс", "2. Магистериум", "3. Астория"],
+      correctAnswer: 1,
+    },
+    {
+      question: "Как зовут домашнего эльфа, который служил семье Малфоев?",
+      options: ["1. Добби", "2. Кречер", "3. Винки"],
+      correctAnswer: 1,
+    },
+    {
+      question: "Как называется поезд, который везёт учеников в Хогвартс?",
+      options: [
+        "1. «Экспресс Авалон»",
+        "2. «Ночной Рыцарь»",
+        "3. «Хогвартс-экспресс»",
+      ],
+      correctAnswer: 3,
+    },
+    {
+      question: "Кто был хранителем Тайной комнаты в Хогвартсе?",
+      options: ["1. Дракон Смауг", "2. Василиск", "3. Трёхглавый пёс Пушок"],
+      correctAnswer: 2,
+    },
+    {
+      question: "Какое зелье позволяет принять облик другого человека?",
+      options: [
+        "1. Зелье невидимости",
+        "2. Феликс Фелицис",
+        "3. Оборотное зелье",
+      ],
+      correctAnswer: 3,
+    },
+  ];
+
+  for (let i = 0; i < quizQuestionsWithAnswers.length; i++) {
+    const currentQuestion = quizQuestionsWithAnswers[i];
+
+    const fullQuestionText =
+      currentQuestion.question + "\n" + currentQuestion.options.join("\n");
+    const userAnswer = +prompt(fullQuestionText);
+    if (userAnswer === currentQuestion.correctAnswer) {
+      alert("Прекрасно! Это правильный ответ!");
+    } else {
+      alert(`К сожалению, правильный ответ: ${currentQuestion.correctAnswer} `);
+    }
+  }
+}
