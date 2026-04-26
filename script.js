@@ -108,6 +108,8 @@ function reverseText() {
 // Игра "Простая викторина"
 
 function simpleQuiz() {
+  let isGameOver = false;
+
   alert(
     "В этой игре, вам будет задан вопрос, и проедложено несколько вариантов ответа. Что бы ответить на вопрос, просто напишите номер ответа!",
   );
@@ -148,16 +150,50 @@ function simpleQuiz() {
     },
   ];
 
-  for (let i = 0; i < quizQuestionsWithAnswers.length; i++) {
-    const currentQuestion = quizQuestionsWithAnswers[i];
+  let correctAnswersCounter = 0;
 
-    const fullQuestionText =
-      currentQuestion.question + "\n" + currentQuestion.options.join("\n");
-    const userAnswer = +prompt(fullQuestionText);
-    if (userAnswer === currentQuestion.correctAnswer) {
-      alert("Прекрасно! Это правильный ответ!");
-    } else {
-      alert(`К сожалению, правильный ответ: ${currentQuestion.correctAnswer} `);
+  for (let i = 0; i < quizQuestionsWithAnswers.length && !isGameOver; i++) {
+    let isAnsweredCorrectly = false;
+
+    while (!isAnsweredCorrectly && !isGameOver) {
+      // И здесь тоже добавили проверку
+      const currentQuestion = quizQuestionsWithAnswers[i];
+      const fullQuestionText =
+        currentQuestion.question + "\n" + currentQuestion.options.join("\n");
+
+      const userInput = prompt(fullQuestionText);
+
+      if (userInput === null) {
+        alert("Игра принудительно окончена");
+        // 3. Устанавливаем флаг, что игра окончена
+        isGameOver = true;
+        // Выходим из внутреннего цикла while
+        break;
+      }
+
+      const userAnswer = +userInput;
+
+      if (userAnswer === currentQuestion.correctAnswer) {
+        alert("Прекрасно! Это правильный ответ!");
+        correctAnswersCounter++;
+        isAnsweredCorrectly = true;
+      } else if (isNaN(userAnswer) || userAnswer < 1 || userAnswer > 3) {
+        alert(
+          "Вы не написали ответ, или написали его не корректно. Вам нужно указать номер вашего ответа, от 1 до 3.",
+        );
+      } else {
+        alert(
+          `К сожалению, правильный ответ: ${currentQuestion.correctAnswer} `,
+        );
+        isAnsweredCorrectly = true;
+      }
     }
+  }
+
+  // Финальный результат выводим, ТОЛЬКО если игра не была прервана
+  if (!isGameOver) {
+    alert(
+      `Игра окончена! Вы ответили правильно на ${correctAnswersCounter} из ${quizQuestionsWithAnswers.length} вопросов.`,
+    );
   }
 }
