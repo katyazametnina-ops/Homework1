@@ -94,15 +94,22 @@ function startMathGame() {
 // Игра "Переверни текст"
 
 function reverseText() {
-  let userText = prompt("Попробуй ввести текст, который будет перевернут");
-  if (userText === null || userText.trim() === "") {
-    alert("Игра окончена.");
-    return;
+
+  while (true) {
+    
+    let userText = prompt("Попробуй ввести текст, который будет перевернут");
+
+    if (!userText) {
+      alert("Игра окончена.");
+      break;
+    }
+
+    let stringToArray = userText.split("");
+    let reverseArray = stringToArray.reverse();
+    let arrayToString = reverseArray.join("");
+
+    alert(`В перевернутом виде, это слово будет: ${arrayToString}`);
   }
-  let stringToArray = userText.split("");
-  let reverseArray = stringToArray.reverse();
-  let arrayToString = reverseArray.join("");
-  alert(`В перевернутом виде, это слова будет: ${arrayToString}`);
 }
 
 // Игра "Простая викторина"
