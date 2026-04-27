@@ -1,16 +1,24 @@
 // Задание 7
-// Дан массив: 
-// [9, 8, 7, 6, 5].
+// Создать функцию, которая принимает два целых числа и возвращает случайное число в этом диапазоне.
 
-// Попросите пользователя угадать число с помощью метода 
-// prompt. Если значение, которое ввел пользователь, есть в массиве, выведите в alert
-//  «Угадал», в противном случае — «Не угадал».
+// Функция принимает два целых числа и возвращает случайное число в этом диапазоне с использованием 
+// Math.random()
+// , 
+// Math.floor()
+//  или 
+// Math.ceil()
+// .
 
-let arr = [9, 8, 7, 6, 5];
-let userAnswer = +prompt('Угадай задуманное число');
+ function raddomNumb(a, b) {
 
-if (arr.includes(userAnswer)) {
-alert('Угадал!')
-} else {
-  alert('Не угадал');
+  const min = Math.min(a, b);
+  const max = Math.max(a, b);
+
+  const random = Math.floor(Math.random() * (max - min + 1)) + min;
+
+  return random;
 }
+
+const myRandomNumber = raddomNumb(5, 8);
+
+console.log("Случайное число:", myRandomNumber);

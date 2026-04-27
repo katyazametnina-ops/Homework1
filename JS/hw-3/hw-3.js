@@ -1,8 +1,23 @@
 // Задание 3
-// Дан массив чисел: [1, 3, 5, 10, 20].
+// Округлить число 32.58884:
 
-// С помощью метода join выведите элементы массива через пробел (пустую строку ' ').
+// До меньшего целого.
+// До большего целого.
+// До ближайшего целого.
 
-let numbers = [1, 3, 5, 10, 20];
-let number = numbers.join(' ');
-console.log(number);
+// Используйте встроенные функции 
+// Math.floor()
+// , 
+// Math.ceil()
+//  и 
+// Math.round()
+//  для округления значений.
+
+let nonInteger = 32.58884;
+let smallerInteger = Math.floor(nonInteger);
+let largerInteger = Math.ceil(nonInteger);
+let nearestInteger = Math.round(nonInteger);
+
+console.log(smallerInteger);
+console.log(largerInteger);
+console.log(nearestInteger);
