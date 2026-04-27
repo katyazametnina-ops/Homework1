@@ -1,14 +1,15 @@
 // Задание 9
-// Дан массив: 
-// [[1, 2, 3],[4, 5, 6]].
-// Выведите в консоль массив вида: 
-// [1, 2, 3, 4, 5, 6].
+// Создать переменную currentDate, хранящую текущую дату.
+// Вывести дату, которая наступит через 73 дня после текущей.
+// Переменная currentDate создана, дата через 73 дня вычислена и выведена с использованием методов
+// getDate()
+//  и
+// setDate().
 
-let arr = [
-  [1, 2, 3],
-  [4, 5, 6],
-];
+let currentDate = new Date();
 
-let arrMerg = [...arr[0], ...arr[1]];
-console.log(arrMerg);
+let futureDate = new Date(currentDate);
 
+futureDate.setDate(currentDate.getDate() + 73);
+
+console.log("Дата через 73 дня:", futureDate);
