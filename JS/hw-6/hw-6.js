@@ -1,14 +1,17 @@
 // Задание 6
-// Дан массив: 
-// [9, 8, 7, 'a', 6, 5].
+// Написать функцию, которая принимает целое число и возвращает массив случайных чисел от 0 до этого числа.
+// Длина массива должна быть в два раза меньше переданного числа.
+// Подсказка
+// В JavaScript функция Math.random() возвращает случайное число от 0 (включительно) до 1 (не включая).
 
-// С помощью метода 
-// sort
-//  отсортируйте массив и удалите букву 
-// 'a'
-//  из массива. Затем выведите массив.
+function num(a) {
+  const resultArray = [];
+  for (let i = 0; i < Math.floor(a / 2); i++) {
+    const randomNumber = Math.floor(Math.random() * (a + 1));
+    resultArray.push(randomNumber);
+  }
 
-let arr = [9, 8, 7, 'a', 6, 5];
-arr = arr.sort();
-console.log(arr.pop());
-console.log(arr);
+  return resultArray;
+}
+let myArr = num(5);
+console.log(myArr);
