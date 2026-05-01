@@ -205,49 +205,71 @@ function simpleQuiz() {
 
 // Игра «Камень, ножницы, бумага»
 
+// 1. Сначала полностью удаляем старую функцию, если она есть
+// Это решает проблему "зависшего" кода в консоли.
+if (window.rockPaperScissors) {
+  delete window.rockPaperScissors;
+}
+
+// 2. Объявляем НОВУЮ функцию
 function rockPaperScissors() {
   const choices = ["камень", "ножницы", "бумага"];
-  let result;
+  let userWins = 0;
+  let computerWins = 0;
 
-  // Играем, пока не определится победитель (не будет ничьей)
+  // Бесконечный цикл для игры
   while (true) {
-    let userChoice = prompt(
-      "Ваш выбор: камень, ножницы или бумага?",
-    )?.toLowerCase(); // ?. защищает от null, если нажали "Отмена"
+    // Запрашиваем выбор. Если нажали "Отмена", userChoice станет null.
+    const userChoice = prompt(
+      `Счет: Вы ${userWins} - ${computerWins} Компьютер.\n\nВаш ход:`,
+    )
+      ?.toLowerCase()
+      .trim();
 
+    // --- ПРОВЕРКА НА ОТМЕНУ ---
+    // Если это null (нажали Отмена), выводим сообщение и ВЫХОДИМ ИЗ ФУНКЦИИ.
     if (userChoice === null) {
-      alert("Игра прервана пользователем.");
-      return; // Выход из функции, если отмена
+      alert("Игра завершена.");
+      return; // ЭТОТ return ТОЧНО ОСТАНОВИТ ИГРУ
     }
 
+    // --- ПРОВЕРКА НА ВЕРНЫЙ ВВОД ---
     if (!choices.includes(userChoice)) {
       alert("Неверный выбор! Введите: камень, ножницы или бумага.");
-      continue; // Повторяем ввод
+      continue; // Просим ввести снова, не прерывая игру
     }
 
-    let computerChoice = choices[Math.floor(Math.random() * choices.length)];
+    // --- ЛОГИКА ИГРЫ ---
+    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+    let result;
 
     if (userChoice === computerChoice) {
-      result = "Ничья! Играем снова...";
+      result = "Ничья!";
     } else if (
       (userChoice === "камень" && computerChoice === "ножницы") ||
       (userChoice === "ножницы" && computerChoice === "бумага") ||
       (userChoice === "бумага" && computerChoice === "камень")
     ) {
-      result = "Вы победили!";
-      break; // Выходим из цикла при победе пользователя
+      result = "Победа!";
+      userWins++;
     } else {
-      result = "Вы проиграли!";
-      break; // Выходим из цикла при поражении пользователя
+      result = "Поражение!";
+      computerWins++;
     }
 
-    alert(
-      `Вы выбрали: ${userChoice}\nКомпьютер выбрал: ${computerChoice}\n\n${result}`,
-    );
+    alert(`Вы: ${userChoice} | Компьютер: ${computerChoice}\n\n${result}`);
+
+    // --- ПРОВЕРКА НА ПОБЕДУ В МАТЧЕ (ДО 3-Х ПОБЕД) ---
+    if (userWins === 3 || computerWins === 3) {
+      break; // Выходим из цикла while(true)
+    }
   }
 
-  // Финальный результат (победа или поражение)
-  alert(
-    `Вы выбрали: ${userChoice}\nКомпьютер выбрал: ${computerChoice}\n\n${result}`,
-  );
+  // --- ФИНАЛЬНЫЙ РЕЗУЛЬТАТ ---
+  if (userWins === 3) {
+    alert(`🎉 ВЫ СТАЛИ ПОБЕДИТЕЛЕМ! Счет ${userWins}:${computerWins}`);
+  } else {
+    alert(`💀 ВЫ ПРОИГРАЛИ! Счет ${computerWins}:${userWins}`);
+  }
 }
+
