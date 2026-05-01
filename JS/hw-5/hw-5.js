@@ -1,8 +1,10 @@
 // Задание 5
-// Дан массив: 
-// [1, 1, 1]
-// . Добавьте в конец массива значения 2, 2, 2.
+// Создать функцию, которая выводит в консоль случайное число от 1 до 10.
 
-let numb = [1, 1, 1];
-numb.push(2, 2, 2);
-console.log(numb);
+function randomNumb() {
+  let num = Math.random() * 11;
+  let numRounding = Math.floor(num);
+  return numRounding;
+}
+let result = randomNumb();
+console.log(result);

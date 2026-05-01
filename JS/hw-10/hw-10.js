@@ -1,15 +1,30 @@
 // Задание 10
-// Создайте массив с произвольными числами (диапазон от 1 до 10).
-// Переберите его с помощью цикла for.
-// В каждой итерации выведите в консоль сумму текущего и следующего элементов массива.
-// Следующий элемент массива можно получить с помощью индекса: i + 1. 
-// Обратите внимание, что у последнего элемента нет следующего.
+// Написать функцию, которая принимает дату и возвращает ее в формате:
 
-let arr = [5, 3, 9, 1, 7];
+// Дата: [число] [месяц на русском] [год] — это [день недели на русском].
+// Время: [часы]:[минуты]:[секунды]
 
-for (let i = 0; i < arr.length - 1; i++) {
-  
-  let sum = arr[i] + arr[i + 1];
+// Дату и время можно получить из объекта 
+// Date
 
-  console.log(sum);
+
+function traditional(date) {
+  const month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+  const daysWeek = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+
+  const dayOfMonth = date.getDate();
+  const monthIndex = date.getMonth();
+  const year = date.getFullYear();
+  const dayOfWeekIndex = date.getDay();
+
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+
+  const result = `Дата: ${dayOfMonth} ${month[monthIndex]} ${year} — это ${daysWeek[dayOfWeekIndex]}.\nВремя: ${hours}:${minutes}:${seconds}`;
+
+  return result;
 }
+
+const now = new Date();
+console.log(traditional(now));
