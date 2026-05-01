@@ -205,41 +205,34 @@ function simpleQuiz() {
 
 // Игра «Камень, ножницы, бумага»
 
-// 1. Сначала полностью удаляем старую функцию, если она есть
-// Это решает проблему "зависшего" кода в консоли.
+
 if (window.rockPaperScissors) {
   delete window.rockPaperScissors;
 }
 
-// 2. Объявляем НОВУЮ функцию
 function rockPaperScissors() {
   const choices = ["камень", "ножницы", "бумага"];
   let userWins = 0;
   let computerWins = 0;
 
-  // Бесконечный цикл для игры
+ 
   while (true) {
-    // Запрашиваем выбор. Если нажали "Отмена", userChoice станет null.
     const userChoice = prompt(
       `Счет: Вы ${userWins} - ${computerWins} Компьютер.\n\nВаш ход:`,
     )
       ?.toLowerCase()
       .trim();
 
-    // --- ПРОВЕРКА НА ОТМЕНУ ---
-    // Если это null (нажали Отмена), выводим сообщение и ВЫХОДИМ ИЗ ФУНКЦИИ.
     if (userChoice === null) {
       alert("Игра завершена.");
-      return; // ЭТОТ return ТОЧНО ОСТАНОВИТ ИГРУ
+      return;
     }
 
-    // --- ПРОВЕРКА НА ВЕРНЫЙ ВВОД ---
     if (!choices.includes(userChoice)) {
       alert("Неверный выбор! Введите: камень, ножницы или бумага.");
-      continue; // Просим ввести снова, не прерывая игру
+      continue; 
     }
 
-    // --- ЛОГИКА ИГРЫ ---
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
     let result;
 
@@ -259,13 +252,11 @@ function rockPaperScissors() {
 
     alert(`Вы: ${userChoice} | Компьютер: ${computerChoice}\n\n${result}`);
 
-    // --- ПРОВЕРКА НА ПОБЕДУ В МАТЧЕ (ДО 3-Х ПОБЕД) ---
     if (userWins === 3 || computerWins === 3) {
-      break; // Выходим из цикла while(true)
+      break; 
     }
   }
 
-  // --- ФИНАЛЬНЫЙ РЕЗУЛЬТАТ ---
   if (userWins === 3) {
     alert(`🎉 ВЫ СТАЛИ ПОБЕДИТЕЛЕМ! Счет ${userWins}:${computerWins}`);
   } else {
