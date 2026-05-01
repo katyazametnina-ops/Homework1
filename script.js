@@ -94,9 +94,7 @@ function startMathGame() {
 // Игра "Переверни текст"
 
 function reverseText() {
-
   while (true) {
-    
     let userText = prompt("Попробуй ввести текст, который будет перевернут");
 
     if (!userText) {
@@ -203,4 +201,53 @@ function simpleQuiz() {
       `Игра окончена! Вы ответили правильно на ${correctAnswersCounter} из ${quizQuestionsWithAnswers.length} вопросов.`,
     );
   }
+}
+
+// Игра «Камень, ножницы, бумага»
+
+function rockPaperScissors() {
+  const choices = ["камень", "ножницы", "бумага"];
+  let result;
+
+  // Играем, пока не определится победитель (не будет ничьей)
+  while (true) {
+    let userChoice = prompt(
+      "Ваш выбор: камень, ножницы или бумага?",
+    )?.toLowerCase(); // ?. защищает от null, если нажали "Отмена"
+
+    if (userChoice === null) {
+      alert("Игра прервана пользователем.");
+      return; // Выход из функции, если отмена
+    }
+
+    if (!choices.includes(userChoice)) {
+      alert("Неверный выбор! Введите: камень, ножницы или бумага.");
+      continue; // Повторяем ввод
+    }
+
+    let computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+    if (userChoice === computerChoice) {
+      result = "Ничья! Играем снова...";
+    } else if (
+      (userChoice === "камень" && computerChoice === "ножницы") ||
+      (userChoice === "ножницы" && computerChoice === "бумага") ||
+      (userChoice === "бумага" && computerChoice === "камень")
+    ) {
+      result = "Вы победили!";
+      break; // Выходим из цикла при победе пользователя
+    } else {
+      result = "Вы проиграли!";
+      break; // Выходим из цикла при поражении пользователя
+    }
+
+    alert(
+      `Вы выбрали: ${userChoice}\nКомпьютер выбрал: ${computerChoice}\n\n${result}`,
+    );
+  }
+
+  // Финальный результат (победа или поражение)
+  alert(
+    `Вы выбрали: ${userChoice}\nКомпьютер выбрал: ${computerChoice}\n\n${result}`,
+  );
 }
