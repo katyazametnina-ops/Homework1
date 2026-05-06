@@ -1,11 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <script src="./hw-5.js"></script>
-</body>
+  </head>
+  <body>
+    <p class="description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+      voluptatem unde quos eos distinctio a, libero animi tempora labore
+      consequatur! Unde inventore sed magnam neque nobis exercitationem sequi
+      optio excepturi.
+    </p>
+    <p class="paragraph">
+      Nisi facilis laborum officia tempora! A, fugit accusantium rem labore
+      voluptates similique expedita aspernatur quam. Odit voluptatem quis
+      deserunt, perferendis architecto iste modi sapiente inventore quia
+      obcaecati ipsum, neque ut?
+    </p>
+    <p class="description">
+      Minus delectus ducimus, asperiores rerum pariatur dolorum culpa iste est,
+      impedit explicabo unde, consequatur omnis inventore voluptas aliquid ut
+      itaque sit suscipit laboriosam dolores repellat excepturi. Quaerat
+      explicabo aperiam sit.
+    </p>
+    <p class="paragraph">
+      Corporis dolores aut voluptate similique numquam nam consectetur soluta
+      voluptas, aliquid debitis. Fuga possimus, modi consequatur ab quos
+      repellendus quis itaque cumque est dolore aspernatur cum ex cupiditate
+      nostrum nam!
+    </p>
+    <p class="description">
+      Explicabo iusto velit dolores eos sit ipsa quis aut culpa temporibus,
+      corporis ea fuga saepe aspernatur suscipit nemo ratione quaerat nihil
+      delectus obcaecati aliquid, praesentium, incidunt non! Corporis, harum
+      cumque?
+    </p>
+    <script>
+        const descriptionEl = document.querySelectorAll('.description');
+        descriptionEl.forEach(element => {
+        element.textContent = 'Заменённый текст';
+    })
+    </script>
+  </body>
 </html>
