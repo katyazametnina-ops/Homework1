@@ -1,10 +1,21 @@
 // Задание 5
-// Создать функцию, которая выводит в консоль случайное число от 1 до 10.
+// Посмотрите код. В нём допущена ошибка, и он выводит сообщения не в том порядке:
 
-function randomNumb() {
-  let num = Math.random() * 11;
-  let numRounding = Math.floor(num);
-  return numRounding;
+// Функция delayForSecond через 1 секунду пишет в консоль 
+// «Прошла одна секунда», а затем вызывает переданный колбэк
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+        if(cb) {  cb(); }
+    }, 1000)
 }
-let result = randomNumb();
-console.log(result);
+
+// Функция sayHi выводит в консоль приветствие для указанного имени
+function sayHi (name) {
+    console.log(`Привет, ${name}!`);
+}
+
+// Код выше менять нельзя
+
+// Нужно изменить код ниже:
+delayForSecond(() => sayHi('Глеб'));

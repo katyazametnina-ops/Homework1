@@ -1,23 +1,23 @@
 // Задание 3
-// Округлить число 32.58884:
+// Напишите программу, которая на протяжении 30 секунд каждые 3 секунды будет выводить в консоль текущую дату. 
+// Последней строкой должно выводиться сообщение «30 секунд прошло».
 
-// До меньшего целого.
-// До большего целого.
-// До ближайшего целого.
-
-// Используйте встроенные функции 
-// Math.floor()
-// , 
-// Math.ceil()
+// Программа выводит текущую дату каждые 3 секунды в течение 30 секунд с использованием 
+// setInterval
 //  и 
-// Math.round()
-//  для округления значений.
+// setTimeout
+// , последнее сообщение: «30 секунд прошло».
 
-let nonInteger = 32.58884;
-let smallerInteger = Math.floor(nonInteger);
-let largerInteger = Math.ceil(nonInteger);
-let nearestInteger = Math.round(nonInteger);
+// Задание 3: вывод текущей даты каждые 3 секунды в течение 30 секунд
 
-console.log(smallerInteger);
-console.log(largerInteger);
-console.log(nearestInteger);
+const intervalTime = 3000;
+const totalTime = 30000;
+
+const intervalId = setInterval(() => {
+    console.log(new Date().toLocaleString());
+}, intervalTime);
+
+setTimeout(() => {
+    clearInterval(intervalId);
+    console.log('30 секунд прошло');
+}, totalTime);

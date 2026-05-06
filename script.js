@@ -94,9 +94,7 @@ function startMathGame() {
 // Игра "Переверни текст"
 
 function reverseText() {
-
   while (true) {
-    
     let userText = prompt("Попробуй ввести текст, который будет перевернут");
 
     if (!userText) {
@@ -204,3 +202,65 @@ function simpleQuiz() {
     );
   }
 }
+
+// Игра «Камень, ножницы, бумага»
+
+
+if (window.rockPaperScissors) {
+  delete window.rockPaperScissors;
+}
+
+function rockPaperScissors() {
+  const choices = ["камень", "ножницы", "бумага"];
+  let userWins = 0;
+  let computerWins = 0;
+
+ 
+  while (true) {
+    const userChoice = prompt(
+      `Счет: Вы ${userWins} - ${computerWins} Компьютер.\n\nВаш ход:`,
+    )
+      ?.toLowerCase()
+      .trim();
+
+    if (userChoice === null) {
+      alert("Игра завершена.");
+      return;
+    }
+
+    if (!choices.includes(userChoice)) {
+      alert("Неверный выбор! Введите: камень, ножницы или бумага.");
+      continue; 
+    }
+
+    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+    let result;
+
+    if (userChoice === computerChoice) {
+      result = "Ничья!";
+    } else if (
+      (userChoice === "камень" && computerChoice === "ножницы") ||
+      (userChoice === "ножницы" && computerChoice === "бумага") ||
+      (userChoice === "бумага" && computerChoice === "камень")
+    ) {
+      result = "Победа!";
+      userWins++;
+    } else {
+      result = "Поражение!";
+      computerWins++;
+    }
+
+    alert(`Вы: ${userChoice} | Компьютер: ${computerChoice}\n\n${result}`);
+
+    if (userWins === 3 || computerWins === 3) {
+      break; 
+    }
+  }
+
+  if (userWins === 3) {
+    alert(`🎉 ВЫ СТАЛИ ПОБЕДИТЕЛЕМ! Счет ${userWins}:${computerWins}`);
+  } else {
+    alert(`💀 ВЫ ПРОИГРАЛИ! Счет ${computerWins}:${userWins}`);
+  }
+}
+
