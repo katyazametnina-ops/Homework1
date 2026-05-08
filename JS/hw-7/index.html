@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="description">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque mollitia
+      ipsam harum porro officiis ea, at alias labore consequuntur eaque
+      accusamus vel, excepturi fugit ipsa quas, libero quis repudiandae quia!
+    </p>
+    <p class="paragraph">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim beatae quo
+      quod quis dolore fugit tempore temporibus magni? Quisquam itaque
+      doloremque sapiente tempora fuga nisi mollitia deleniti corrupti et
+      facilis?
+    </p>
+    <p class="paragraph">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim beatae quo
+      quod quis dolore fugit tempore temporibus magni? Quisquam itaque
+      doloremque sapiente tempora fuga nisi mollitia deleniti corrupti et
+      facilis?
+    </p>
+    <p class="description">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste odio hic
+      corporis esse, porro illum laudantium voluptas vero architecto. Alias
+      fugit aperiam, quos magni quam excepturi commodi! Ratione, sint rerum.
+    </p>
+    <p class="paragraph">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim beatae quo
+      quod quis dolore fugit tempore temporibus magni? Quisquam itaque
+      doloremque sapiente tempora fuga nisi mollitia deleniti corrupti et
+      facilis?
+    </p>
+    <button class="btn">Удалить элемент</button>
+    <script>
+      const descriptionEl = document.querySelector(".description");
+      const btnEl = document.querySelector(".btn");
+
+      btnEl.addEventListener('click', function(e) {
+        descriptionEl.remove();
+      })
+    </script>
+  </body>
+</html>

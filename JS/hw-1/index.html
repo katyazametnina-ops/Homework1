@@ -1,11 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <script src="./hw-1.js"></script>
-</body>
+    <style>
+        .header-none {
+            display: none;
+        }
+    </style>
+  </head>
+  <body>
+    <h1 class="header header-none">Заголовок</h1>
+    <button class="btn">Скрыть</button>
+    <script>
+      const headerEl = document.querySelector(".header");
+      const btnEl = document.querySelector(".btn");
+
+      btnEl.addEventListener("click", () => {
+        headerEl.classList.toggle('header-none');
+      });
+    </script>
+  </body>
 </html>

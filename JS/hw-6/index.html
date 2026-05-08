@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="btn">Добавить Элемент</button>
+    <div class="content"></div>
+    <script>
+      const btnEl = document.querySelector(".btn");
+      const contentBox = document.querySelector(".content");
+
+      btnEl.addEventListener("click", () => {
+        const descriptionEl = document.createElement("p");
+        descriptionEl.textContent = "Новый абзац";
+        descriptionEl.classList.add("description");
+        contentBox.appendChild(descriptionEl);
+      });
+    </script>
+  </body>
+</html>
