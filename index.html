@@ -286,6 +286,7 @@
 
     <script>
       const colorGame = document.querySelector(".color-game");
+      const miniGames = document.querySelector(".mini-games");
 
       colorGame.addEventListener("click", () => {
         function getRandomHexColor() {
@@ -300,7 +301,7 @@
 
         const newColor = getRandomHexColor();
 
-        document.body.style.backgroundColor = newColor;
+        miniGames.style.backgroundColor = newColor;
       });
     </script>
     <script src="./script.js"></script>
