@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("marqueeContainer");
+  container.innerHTML += container.innerHTML;
+});
+
 // Игра "Угадай число"
 
 function guessNumber() {
@@ -205,7 +210,6 @@ function simpleQuiz() {
 
 // Игра «Камень, ножницы, бумага»
 
-
 if (window.rockPaperScissors) {
   delete window.rockPaperScissors;
 }
@@ -215,7 +219,6 @@ function rockPaperScissors() {
   let userWins = 0;
   let computerWins = 0;
 
- 
   while (true) {
     const userChoice = prompt(
       `Счет: Вы ${userWins} - ${computerWins} Компьютер.\n\nВаш ход:`,
@@ -230,7 +233,7 @@ function rockPaperScissors() {
 
     if (!choices.includes(userChoice)) {
       alert("Неверный выбор! Введите: камень, ножницы или бумага.");
-      continue; 
+      continue;
     }
 
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
@@ -253,7 +256,7 @@ function rockPaperScissors() {
     alert(`Вы: ${userChoice} | Компьютер: ${computerChoice}\n\n${result}`);
 
     if (userWins === 3 || computerWins === 3) {
-      break; 
+      break;
     }
   }
 
@@ -263,4 +266,3 @@ function rockPaperScissors() {
     alert(`💀 ВЫ ПРОИГРАЛИ! Счет ${computerWins}:${userWins}`);
   }
 }
-

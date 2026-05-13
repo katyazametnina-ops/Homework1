@@ -148,13 +148,21 @@ header {
 }
 
 .spinner {
-  display: flex;
+  overflow: hidden;
   background-color: #bcec30;
-  gap: 51px;
   padding-top: 27px;
   padding-bottom: 27px;
+  position: relative;
 }
-.spinner__text {
+.spinner__inner {
+  display: flex;
+  gap: 51px;
+  white-space: nowrap;
+  width: -moz-max-content;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+.spinner__inner-text {
   font-weight: 700;
   font-size: 30px;
   color: #202027;
@@ -162,6 +170,21 @@ header {
   line-height: 110%;
   letter-spacing: 4%;
 }
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.spinner__inner::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  animation-duration: inherit;
+}
+
 .On-games {
   position: relative;
   background-color: #202027;
