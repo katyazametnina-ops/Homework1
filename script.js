@@ -173,7 +173,6 @@ function simpleQuiz() {
     let isAnsweredCorrectly = false;
 
     while (!isAnsweredCorrectly && !isGameOver) {
-      // И здесь тоже добавили проверку
       const currentQuestion = quizQuestionsWithAnswers[i];
       const fullQuestionText =
         currentQuestion.question + "\n" + currentQuestion.options.join("\n");
@@ -182,9 +181,7 @@ function simpleQuiz() {
 
       if (userInput === null) {
         alert("Игра принудительно окончена");
-        // 3. Устанавливаем флаг, что игра окончена
         isGameOver = true;
-        // Выходим из внутреннего цикла while
         break;
       }
 
@@ -207,7 +204,6 @@ function simpleQuiz() {
     }
   }
 
-  // Финальный результат выводим, ТОЛЬКО если игра не была прервана
   if (!isGameOver) {
     alert(
       `Игра окончена! Вы ответили правильно на ${correctAnswersCounter} из ${quizQuestionsWithAnswers.length} вопросов.`,
@@ -227,16 +223,16 @@ function rockPaperScissors() {
   let computerWins = 0;
 
   while (true) {
-    const userChoice = prompt(
+    const rawInput = prompt(
       `Счет: Вы ${userWins} - ${computerWins} Компьютер.\n\nВаш ход:`,
-    )
-      ?.toLowerCase()
-      .trim();
+    );
 
-    if (userChoice === null) {
+    if (rawInput === null) {
       alert("Игра завершена.");
       return;
     }
+
+    const userChoice = rawInput.toLowerCase().trim();
 
     if (!choices.includes(userChoice)) {
       alert("Неверный выбор! Введите: камень, ножницы или бумага.");
