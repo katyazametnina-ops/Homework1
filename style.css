@@ -49,7 +49,7 @@ header {
 }
 .header__button {
   background-color: #202027;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 247px;
   height: 66px;
   border: 1px solid #202027;
@@ -147,19 +147,34 @@ header {
   display: none;
 }
 
+.spinner {
+  display: flex;
+  background-color: #bcec30;
+  gap: 51px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+.spinner__text {
+  font-weight: 700;
+  font-size: 30px;
+  color: #202027;
+  white-space: nowrap;
+  line-height: 110%;
+  letter-spacing: 4%;
+}
 .On-games {
   position: relative;
   background-color: #202027;
 }
 .On-games__title {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 64px;
   font-weight: 700;
   padding-top: 94px;
   padding-bottom: 24px;
 }
 .On-games__description {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
@@ -183,7 +198,7 @@ header {
 
 .game-card {
   z-index: 1;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   width: 378px;
   box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.1294117647);
   border-radius: 30px;
@@ -193,7 +208,7 @@ header {
 }
 .game-card__number {
   color: #202027;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 16px;
@@ -223,7 +238,7 @@ header {
 .mini-games__title {
   font-size: 64px;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #ffffff;
   padding-bottom: 72px;
 }
 .mini-games__alternatives {
@@ -243,7 +258,7 @@ header {
 
 .mini-game {
   z-index: 1;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.1294117647);
   border-radius: 30px;
 }
@@ -272,7 +287,7 @@ header {
   width: 247px;
   height: 66px;
   border-radius: 60px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 24px;
   font-weight: 600;
   border: 1px solid #202027;
@@ -298,14 +313,14 @@ header {
   width: 247px;
   height: 66px;
   border-radius: 60px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 24px;
   font-weight: 600;
   border: 1px solid #202027;
 }
 
 footer {
-  background-color: #BDED35;
+  background-color: #bded35;
   text-align: center;
 }
 
@@ -317,7 +332,7 @@ footer {
 }
 
 .header__button:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #202027;
   transition: 0.3s;
 }
@@ -328,13 +343,13 @@ footer {
 }
 
 .mini-game__left-btn:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #202027;
   transition: 0.3s;
 }
 
 .mini-game__right-btn:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #202027;
   transition: 0.3s;
 }
