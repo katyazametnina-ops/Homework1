@@ -78,10 +78,17 @@ function startMathGame() {
 
     const questionText = `Вопрос ${i + 1} из ${totalQuestions}: ${num1} ${operation} ${num2}`;
 
-    const userInput = +prompt(questionText + " = ?");
+    const rawInput = prompt(questionText + " = ?");
 
-    if (userInput === null || isNaN(userInput)) {
-      alert("Вы вышли из игры или ввели некорректное значение.");
+    if (rawInput === null) {
+      alert("Вы вышли из игры.");
+      return;
+    }
+
+    const userInput = +rawInput;
+
+    if (isNaN(userInput)) {
+      alert("Некорректное значение. Игра завершена.");
       return;
     }
 
