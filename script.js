@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("marqueeContainer");
+  container.innerHTML += container.innerHTML;
+});
+
 // Игра "Угадай число"
 
 function guessNumber() {
@@ -73,10 +78,17 @@ function startMathGame() {
 
     const questionText = `Вопрос ${i + 1} из ${totalQuestions}: ${num1} ${operation} ${num2}`;
 
-    const userInput = +prompt(questionText + " = ?");
+    const rawInput = prompt(questionText + " = ?");
 
-    if (userInput === null || isNaN(userInput)) {
-      alert("Вы вышли из игры или ввели некорректное значение.");
+    if (rawInput === null) {
+      alert("Вы вышли из игры.");
+      return;
+    }
+
+    const userInput = +rawInput;
+
+    if (isNaN(userInput)) {
+      alert("Некорректное значение. Игра завершена.");
       return;
     }
 
@@ -161,7 +173,6 @@ function simpleQuiz() {
     let isAnsweredCorrectly = false;
 
     while (!isAnsweredCorrectly && !isGameOver) {
-      // И здесь тоже добавили проверку
       const currentQuestion = quizQuestionsWithAnswers[i];
       const fullQuestionText =
         currentQuestion.question + "\n" + currentQuestion.options.join("\n");
@@ -170,9 +181,7 @@ function simpleQuiz() {
 
       if (userInput === null) {
         alert("Игра принудительно окончена");
-        // 3. Устанавливаем флаг, что игра окончена
         isGameOver = true;
-        // Выходим из внутреннего цикла while
         break;
       }
 
@@ -195,7 +204,6 @@ function simpleQuiz() {
     }
   }
 
-  // Финальный результат выводим, ТОЛЬКО если игра не была прервана
   if (!isGameOver) {
     alert(
       `Игра окончена! Вы ответили правильно на ${correctAnswersCounter} из ${quizQuestionsWithAnswers.length} вопросов.`,
@@ -204,7 +212,6 @@ function simpleQuiz() {
 }
 
 // Игра «Камень, ножницы, бумага»
-
 
 if (window.rockPaperScissors) {
   delete window.rockPaperScissors;
@@ -215,22 +222,21 @@ function rockPaperScissors() {
   let userWins = 0;
   let computerWins = 0;
 
- 
   while (true) {
-    const userChoice = prompt(
+    const rawInput = prompt(
       `Счет: Вы ${userWins} - ${computerWins} Компьютер.\n\nВаш ход:`,
-    )
-      ?.toLowerCase()
-      .trim();
+    );
 
-    if (userChoice === null) {
+    if (rawInput === null) {
       alert("Игра завершена.");
       return;
     }
 
+    const userChoice = rawInput.toLowerCase().trim();
+
     if (!choices.includes(userChoice)) {
       alert("Неверный выбор! Введите: камень, ножницы или бумага.");
-      continue; 
+      continue;
     }
 
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
@@ -253,7 +259,7 @@ function rockPaperScissors() {
     alert(`Вы: ${userChoice} | Компьютер: ${computerChoice}\n\n${result}`);
 
     if (userWins === 3 || computerWins === 3) {
-      break; 
+      break;
     }
   }
 
@@ -263,4 +269,3 @@ function rockPaperScissors() {
     alert(`💀 ВЫ ПРОИГРАЛИ! Счет ${computerWins}:${userWins}`);
   }
 }
-
